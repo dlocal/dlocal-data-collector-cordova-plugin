@@ -40,7 +40,7 @@ When the user starts the checkout transaction, gather the session id like so:
 Submit this value in the payment request within the `additional_risk_data.device.event_uuid` parameter. The `sessionId` can be `undefined` if a session is not available or an error occurred.
 
 ### App Store
-If your app is distributed through the App Store, you musst comply with the App Store rules. When using this SDK you must ensure the following: 
+If your app is distributed through the App Store, you must comply with the App Store rules. When using this SDK you must ensure the following: 
 
 * Add a disclaimer in the app that says that device data is collected and sent to a third party (dlocal). 
 * If your app uses location, please add to the info.plist NSLocatioUsageeDescription keys a disclaimer that the location data will also be used in fraud prevention.
