@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="dl-data-collector-cordova-plugin" version="0.0.1">
+    <name>DLDataCollectorSDK</name>
+
+    <description>dLocal Data Collector SDK ionic plugin</description>
+    <license>MIT</license>
+
+    <keywords>cordova,dlocal</keywords>
+    <repo>https://bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin</repo>
+    <issue>mailto:mobile-dev@dlocal.com</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.2.0"/>
+    </engines>
+  
+    <js-module src="www/dlcollector.js" name="DLCollector">
+        <clobbers target="window.plugins.DLCollector" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DLCollector">
+                <param name="android-package" value="com.dlocal.cordova.plugin.datacollector"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/DLCollectorPlugin.java" target-dir="src/com/dlocal/cordova/plugin" />
+        <framework src="com.dlocal.android:data-collector:1.+" />
+    </platform>
+
+    <platform name="ios">
+		<js-module name="DLCollector" src="www/dlcollector.js">
+			<clobbers target="DLCollector" />
+		</js-module>
+		<config-file parent="/*" target="config.xml">
+			<feature name="DLCollector">
+				<param name="ios-package" value="DLCollector" />
+			</feature>
+		</config-file>
+        
+
+		<source-file src="src/ios/DLCollectorPlugin.swift" />
+
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="DLDataCollectorSDK" spec="~> 0.1" />
+            </pods>
+        </podspec>
+	</platform>
+</plugin>

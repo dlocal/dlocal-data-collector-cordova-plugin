@@ -1,0 +1,34 @@
+{
+    "name": "dl-data-collector-cordova-plugin",
+    "version": "0.0.1",
+    "description": "dLocal Data Collector SDK ionic plugin",
+    "cordova": {
+        "id": "dl-data-collector-cordova-plugin",
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin.git"
+    },
+    "keywords": [
+        "Cordova",
+        "DLDataCollectorSDK",
+        "DLOCAL"
+    ],
+    "engines": {
+        "cordovaDependencies": {
+            "3.0.0": {
+                "cordova": ">100"
+            }
+        }
+    },
+    "author": "DLOCAL <mobile-dev@dlocal.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "mailto:mobile-dev@dlocal.com"
+    },
+    "homepage": "https://bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin"
+}
