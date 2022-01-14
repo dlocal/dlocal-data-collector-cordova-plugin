@@ -11,7 +11,7 @@ More info about the functionallity of the SDK on each platform can be found on t
 
 ## Install
 ```ash
-cordova plugin add https://nrostan_dl@bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin.git
+cordova plugin add https://bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin.git
 ```
 
 ## Usage
