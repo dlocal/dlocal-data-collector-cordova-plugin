@@ -10,9 +10,9 @@ This plugin is a wrapper of the native SDKs which can be found here:
 More info about the functionallity of the SDK on each platform can be found on those repositories.
 
 ## Install
-'''bash
+```ash
 cordova plugin add https://nrostan_dl@bitbucket.org/dlocal-public/dlocal-data-collector-cordova-plugin.git
-'''
+```
 
 ## Usage
 ### Setup on app start
