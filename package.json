@@ -1,6 +1,6 @@
 {
     "name": "dl-data-collector-cordova-plugin",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "dLocal Data Collector SDK ionic plugin",
     "cordova": {
         "id": "dl-data-collector-cordova-plugin",
