@@ -2,7 +2,9 @@ import DLDataCollectorSDK
 @objc(DLCollector) class DLCollector : CDVPlugin {
     @objc(setUp:)
     func setUp(command: CDVInvokedUrlCommand) {
-        let env = command.argument(at: 1) as? Int
+        let arguments = command.argument(at: 0) as? Dictionary<String, Any>
+        
+        let env = arguments?["env"] as? Int
         var environment: DLEnvironment = .production
         var pluginResult: CDVPluginResult
         
@@ -10,7 +12,7 @@ import DLDataCollectorSDK
             environment = dlEnv
         }
         
-        guard let apiKey: String = command.argument(at: 0) as? String else {
+        guard let apiKey: String = arguments?["apiKey"] as? String else {
             pluginResult = CDVPluginResult (status: CDVCommandStatus_ERROR, messageAs: "Missing API Key");
             self.commandDelegate!.send(pluginResult, callbackId: command.callbackId);
             return
