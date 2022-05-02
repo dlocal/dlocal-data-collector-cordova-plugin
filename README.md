@@ -21,7 +21,7 @@ Add this to your app startup,
     DLCollector.setUp({
       apiKey: "TEST",
       env: DLCollector.ENV_SANDBOX // or DLCollector.ENV_PROD
-    );
+    });
 
     DLCollector.startSession();
     
